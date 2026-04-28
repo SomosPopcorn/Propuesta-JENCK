@@ -564,7 +564,7 @@ function checkAutoCode() {
 }
 function checkCode() {
   var code = ['d1','d2','d3','d4'].map(function(id){ return document.getElementById(id).value }).join('');
-  if (code === '3612') {
+  if (code.charCodeAt(0)===51&&code.charCodeAt(1)===54&&code.charCodeAt(2)===49&&code.charCodeAt(3)===50) {
     var ls = document.getElementById('lockscreen');
     ls.style.transition = 'opacity .4s ease';
     ls.style.opacity = '0';
