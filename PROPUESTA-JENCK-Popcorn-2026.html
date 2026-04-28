@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Comercial — Jenck S.A. | Somos Popcorn</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0a0a0a;
+  --dark: #111827;
+  --red: #E53935;
+  --red-hover: #c62828;
+  --white: #FFFFFF;
+  --off-white: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-400: #9CA3AF;
+  --gray-600: #4B5563;
+  --gray-800: #1F2937;
+  --text: #111827;
+  --green: #16a34a;
+  --yellow: #ca8a04;
+  --orange: #ea580c;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.65;
+  font-size: 15px;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: 56px;
+}
+.nav-logo { color: var(--white); font-size: 14px; font-weight: 700; letter-spacing: 0.02em; }
+.nav-logo span { color: var(--red); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.65); font-size: 13px; font-weight: 500; text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: #fff; }
+.nav-cta { background: var(--red); color: #fff; font-size: 13px; font-weight: 600; padding: 7px 18px; border-radius: 6px; text-decoration: none; transition: background .2s; }
+.nav-cta:hover { background: var(--red-hover); }
+
+/* ── SECTIONS ── */
+section { padding: 80px 40px; }
+.container { max-width: 1000px; margin: 0 auto; }
+.container-wide { max-width: 1100px; margin: 0 auto; }
+
+/* ── HERO ── */
+#hero {
+  background: var(--black);
+  padding: 140px 40px 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(229,57,53,0.12); border: 1px solid rgba(229,57,53,0.3);
+  color: #ff6b6b; font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 5px 14px; border-radius: 100px;
+  margin-bottom: 28px;
+}
+.hero-label::before { content: '●'; font-size: 8px; }
+#hero h1 {
+  font-size: clamp(36px, 5vw, 62px); font-weight: 900; color: var(--white);
+  line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 20px;
+}
+#hero h1 em { color: var(--red); font-style: normal; }
+#hero .subtitle {
+  font-size: 17px; color: rgba(255,255,255,0.55); max-width: 580px;
+  margin-bottom: 40px; font-weight: 400;
+}
+.hero-meta {
+  display: flex; gap: 32px; flex-wrap: wrap;
+  padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+.hero-meta-item .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.35); }
+.hero-meta-item .value { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+
+/* ── SCORE SECTION ── */
+#diagnostico { background: var(--off-white); }
+.section-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--red); margin-bottom: 10px;
+}
+.section-title {
+  font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; letter-spacing: -0.025em;
+  color: var(--dark); margin-bottom: 12px;
+}
+.section-desc { font-size: 16px; color: var(--gray-600); max-width: 580px; margin-bottom: 48px; }
+
+.score-global {
+  display: flex; align-items: center; gap: 32px;
+  background: var(--dark); border-radius: 16px; padding: 28px 36px;
+  margin-bottom: 36px; flex-wrap: wrap;
+}
+.score-number {
+  font-size: 72px; font-weight: 900; color: var(--white);
+  letter-spacing: -0.04em; line-height: 1;
+}
+.score-number span { font-size: 28px; font-weight: 400; color: rgba(255,255,255,0.4); }
+.score-grade {
+  background: var(--red); color: #fff;
+  font-size: 28px; font-weight: 900; width: 56px; height: 56px;
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+}
+.score-context { flex: 1; }
+.score-context h3 { color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.score-context p { color: rgba(255,255,255,0.55); font-size: 14px; }
+
+.scores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.score-card {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: 12px; padding: 20px 22px;
+}
+.score-card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.score-card-label { font-size: 13px; font-weight: 600; color: var(--gray-800); }
+.score-card-value { font-size: 20px; font-weight: 800; }
+.score-bar-bg { height: 6px; background: var(--gray-200); border-radius: 100px; overflow: hidden; }
+.score-bar { height: 100%; border-radius: 100px; width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+.score-card-note { font-size: 12px; color: var(--gray-400); margin-top: 8px; }
+
+.c-red { color: #EF4444; } .b-red { background: #EF4444; }
+.c-orange { color: #F97316; } .b-orange { background: #F97316; }
+.c-yellow { color: #EAB308; } .b-yellow { background: #EAB308; }
+.c-green { color: #22C55E; } .b-green { background: #22C55E; }
+
+/* ── HALLAZGOS ── */
+#hallazgos { background: var(--white); }
+.findings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.finding-card {
+  border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px;
+  transition: box-shadow .2s, transform .2s;
+}
+.finding-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.finding-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 14px;
+}
+.finding-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+.finding-card p { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+.bg-red { background: #FEF2F2; }
+.bg-orange { background: #FFF7ED; }
+.bg-yellow { background: #FEFCE8; }
+.bg-blue { background: #EFF6FF; }
+.bg-purple { background: #F5F3FF; }
+
+/* ── PROPUESTA ── */
+#propuesta { background: var(--off-white); }
+.propuesta-intro {
+  background: var(--dark); border-radius: 16px; padding: 36px 40px;
+  margin-bottom: 40px;
+}
+.propuesta-intro p { color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.7; }
+.propuesta-intro strong { color: #fff; }
+
+.services-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; }
+.service-item {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+}
+.service-item:last-child { border-bottom: none; }
+.service-header {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px; cursor: pointer;
+  transition: background .15s;
+}
+.service-header:hover { background: var(--off-white); }
+.service-num {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: var(--dark); color: #fff;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.service-title-group { flex: 1; }
+.service-title { font-size: 15px; font-weight: 700; color: var(--dark); }
+.service-subtitle { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+.service-price {
+  font-size: 16px; font-weight: 800; color: var(--dark);
+  white-space: nowrap;
+}
+.service-toggle {
+  width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+  color: var(--gray-400); font-size: 18px; transition: transform .3s;
+  flex-shrink: 0;
+}
+.service-body {
+  display: none; padding: 0 24px 24px 72px;
+}
+.service-body.open { display: block; }
+.service-toggle.open { transform: rotate(45deg); }
+.service-body p { font-size: 14px; color: var(--gray-600); margin-bottom: 14px; line-height: 1.6; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-size: 12px; font-weight: 500; color: var(--gray-600);
+  background: var(--gray-100); border-radius: 100px; padding: 4px 12px;
+}
+.service-note {
+  margin-top: 14px; font-size: 12px; color: var(--red);
+  display: flex; align-items: center; gap: 6px;
+}
+.service-note::before { content: 'ⓘ'; }
+
+/* ── CALCULADORA ── */
+#calculadora { background: var(--white); }
+.calc-grid { display: grid; grid-template-columns: 1fr 320px; gap: 32px; align-items: start; }
+.calc-items { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; }
+.calc-item {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px; border-bottom: 1px solid var(--gray-200);
+  cursor: pointer; transition: background .15s; user-select: none;
+}
+.calc-item:last-child { border-bottom: none; }
+.calc-item:hover { background: var(--off-white); }
+.calc-item input[type="checkbox"] { display: none; }
+.calc-check {
+  width: 20px; height: 20px; border-radius: 5px;
+  border: 2px solid var(--gray-200); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .2s;
+}
+.calc-item.selected .calc-check {
+  background: var(--dark); border-color: var(--dark);
+  color: white;
+}
+.calc-item.selected .calc-check::after { content: '✓'; font-size: 12px; font-weight: 700; }
+.calc-item-info { flex: 1; }
+.calc-item-name { font-size: 14px; font-weight: 600; color: var(--dark); }
+.calc-item-desc { font-size: 12px; color: var(--gray-400); }
+.calc-item-price { font-size: 15px; font-weight: 700; color: var(--dark); white-space: nowrap; }
+
+.calc-sidebar {
+  position: sticky; top: 72px;
+  background: var(--dark); border-radius: 14px; padding: 28px;
+}
+.calc-sidebar h3 { color: rgba(255,255,255,0.5); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; }
+.calc-selected-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; min-height: 60px; }
+.calc-selected-item { display: flex; justify-content: space-between; gap: 12px; }
+.calc-selected-item span:first-child { font-size: 13px; color: rgba(255,255,255,0.7); }
+.calc-selected-item span:last-child { font-size: 13px; font-weight: 600; color: #fff; white-space: nowrap; }
+.calc-empty { color: rgba(255,255,255,0.25); font-size: 13px; font-style: italic; }
+.calc-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0; }
+.calc-total-row { display: flex; justify-content: space-between; align-items: baseline; }
+.calc-total-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); }
+.calc-total-amount { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: -0.03em; }
+.calc-note { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 8px; text-align: right; }
+.calc-cta {
+  display: block; text-align: center; margin-top: 20px;
+  background: var(--red); color: #fff; font-size: 14px; font-weight: 700;
+  padding: 13px; border-radius: 9px; text-decoration: none;
+  transition: background .2s;
+}
+.calc-cta:hover { background: var(--red-hover); }
+
+/* ── CRONOGRAMA ── */
+#cronograma { background: var(--off-white); }
+.timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+.timeline::before {
+  content: ''; position: absolute; left: 23px; top: 12px; bottom: 12px; width: 2px;
+  background: var(--gray-200);
+}
+.timeline-item { display: flex; gap: 24px; align-items: flex-start; padding-bottom: 28px; position: relative; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+  background: var(--white); border: 2px solid var(--gray-200);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; position: relative; z-index: 1;
+}
+.timeline-dot.active { background: var(--dark); border-color: var(--dark); }
+.timeline-content { padding-top: 10px; }
+.timeline-week { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-400); margin-bottom: 4px; }
+.timeline-title { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+.timeline-desc { font-size: 13px; color: var(--gray-600); }
+
+/* ── WHY POPCORN ── */
+#popcorn { background: var(--white); }
+.popcorn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.popcorn-text h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 800; letter-spacing: -0.025em; margin-bottom: 16px; }
+.popcorn-text p { font-size: 15px; color: var(--gray-600); margin-bottom: 12px; }
+.popcorn-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.popcorn-stat { background: var(--off-white); border-radius: 12px; padding: 20px; }
+.popcorn-stat .num { font-size: 32px; font-weight: 900; color: var(--dark); letter-spacing: -0.03em; }
+.popcorn-stat .desc { font-size: 13px; color: var(--gray-600); margin-top: 4px; }
+
+/* ── PASOS ── */
+#pasos {
+  background: var(--dark);
+  color: var(--white);
+}
+#pasos .section-eyebrow { color: #ff6b6b; }
+#pasos .section-title { color: var(--white); }
+#pasos .section-desc { color: rgba(255,255,255,0.55); }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; }
+.step { background: var(--dark); padding: 28px 24px; }
+.step-num { font-size: 42px; font-weight: 900; color: var(--red); line-height: 1; margin-bottom: 12px; letter-spacing: -0.04em; }
+.step h3 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.step p { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  padding: 40px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-inner {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;
+  gap: 20px;
+}
+.footer-brand { color: #fff; font-size: 16px; font-weight: 800; }
+.footer-brand span { color: var(--red); }
+.footer-contact { text-align: right; }
+.footer-contact p { color: rgba(255,255,255,0.4); font-size: 13px; }
+.footer-contact a { color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 600; text-decoration: none; }
+.footer-contact a:hover { color: #fff; }
+.footer-validity {
+  background: rgba(255,255,255,0.04); border-radius: 8px;
+  padding: 10px 18px; text-align: center;
+}
+.footer-validity p { color: rgba(255,255,255,0.35); font-size: 12px; }
+.footer-validity strong { color: rgba(255,255,255,0.7); }
+
+/* ── DIVIDER ── */
+.section-divider { height: 1px; background: var(--gray-200); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  section { padding: 56px 20px; }
+  #hero { padding: 110px 20px 56px; }
+  .calc-grid { grid-template-columns: 1fr; }
+  .calc-sidebar { position: static; }
+  .popcorn-grid { grid-template-columns: 1fr; }
+  footer { padding: 32px 20px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-contact { text-align: center; }
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; }
+.fade-up.visible { animation: fadeUp 0.5s ease forwards; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Somos <span>Popcorn</span></div>
+  <ul class="nav-links">
+    <li><a href="#diagnostico">Diagnóstico</a></li>
+    <li><a href="#propuesta">Propuesta</a></li>
+    <li><a href="#calculadora">Inversión</a></li>
+    <li><a href="#cronograma">Cronograma</a></li>
+  </ul>
+  <a href="#pasos" class="nav-cta">Avanzar →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-label">Propuesta comercial · Confidencial</div>
+    <h1>Rediseño web y sistema<br>de comunicación para <em>Jenck</em></h1>
+    <p class="subtitle">Basada en un análisis completo de la presencia digital actual de Jenck S.A. y orientada a cerrar la brecha entre lo que la empresa es y lo que comunica.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">Preparada para</span>
+        <span class="value">Jenck S.A.</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Preparada por</span>
+        <span class="value">Somos Popcorn</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Fecha</span>
+        <span class="value">Abril 2026</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Válida hasta</span>
+        <span class="value">28 de mayo de 2026</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Contacto</span>
+        <span class="value">Florencia · florencia@somospopcorn.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNÓSTICO -->
+<section id="diagnostico">
+  <div class="container">
+    <p class="section-eyebrow fade-up">Diagnóstico</p>
+    <h2 class="section-title fade-up">Análisis de la presencia digital actual</h2>
+    <p class="section-desc fade-up">Antes de presentar nuestra propuesta, analizamos en profundidad el sitio web, el portal NotiJenck, LinkedIn y los materiales disponibles públicamente. Este es el resultado.</p>
+
+    <div class="score-global fade-up">
+      <div>
+        <div class="score-number" id="globalScore">0<span>/100</span></div>
+        <div style="color: rgba(255,255,255,0.4); font-size: 13px; margin-top: 4px;">Puntaje global de marketing digital</div>
+      </div>
+      <div class="score-grade">D</div>
+      <div class="score-context">
+        <h3>Por debajo del potencial real de la empresa</h3>
+        <p>Jenck tiene activos extraordinarios. El problema es que ninguno de ellos es visible en su comunicación digital. El gap entre la empresa real y la empresa comunicada es el diagnóstico central.</p>
+      </div>
+    </div>
+
+    <div class="scores-grid">
+      <div class="score-card fade-up">
+        <div class="score-card-header">
+          <span class="score-card-label">Contenido & Messaging</span>
+          <span class="score-card-value c-yellow" data-score="52">0</span>
+        </div>
+        <div class="score-bar-bg"><div class="score-bar b-yellow" data-width="52"></div></div>
+        <div class="score-card-note">Homepage sin propuesta de valor. NotiJenck excelente pero desconectado.</div>
+      </div>
+      <div class="score-card fade-up">
+        <div class="score-card-header">
+          <span class="score-card-label">Optimización de Conversión</span>
+          <span class="score-card-value c-red" data-score="31">0</span>
+        </div>
+        <div class="score-bar-bg"><div class="score-bar b-red" data-width="31"></div></div>
+        <div class="score-card-note">Sin CTAs, sin formularios, sin WhatsApp. El sitio no captura ningún lead.</div>
+      </div>
+      <div class="score-card fade-up">
+        <div class="score-card-header">
+          <span class="score-card-label">SEO & Discoverabilidad</span>
+          <span class="score-card-value c-red" data-score="28">0</span>
+        </div>
+        <div class="score-bar-bg"><div class="score-bar b-red" data-width="28"></div></div>
+        <div class="score-card-note">El catálogo de productos no es indexable por Google por arquitectura JS.</div>
+      </div>
+      <div class="score-card fade-up">
+        <div class="score-card-header">
+          <span class="score-card-label">Posicionamiento Competitivo</span>
+          <span class="score-card-value c-yellow" data-score="58">0</span>
+        </div>
+        <div class="score-bar-bg"><div class="score-bar b-yellow" data-width="58"></div></div>
+        <div class="score-card-note">Activos sólidos (ISO, multi-marca) pero sin articular en la comunicación.</div>
+      </div>
+      <div class="score-card fade-up">
+        <div class="score-card-header">
+          <span class="score-card-label">Brand & Trust</span>
+          <span class="score-card-value c-yellow" data-score="62">0</span>
+        </div>
+        <div class="score-bar-bg"><div class="score-bar b-yellow" data-width="62"></div></div>
+        <div class="score-card-note">Reputación offline sólida. Online sin testimoniales ni prueba social.</div>
+      </div>
+      <div class="score-card fade-up">
+        <div class="score-card-header">
+          <span class="score-card-label">Crecimiento & Estrategia</span>
+          <span class="score-card-value c-yellow" data-score="55">0</span>
+        </div>
+        <div class="score-bar-bg"><div class="score-bar b-yellow" data-width="55"></div></div>
+        <div class="score-card-note">Modelo diversificado pero sin loops de conversión digitales activados.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALLAZGOS -->
+<section id="hallazgos">
+  <div class="container">
+    <p class="section-eyebrow fade-up">Hallazgos clave</p>
+    <h2 class="section-title fade-up">Lo que encontramos</h2>
+    <p class="section-desc fade-up">Jenck tiene 35 años, ISO 9001, 40+ técnicos especializados, NotiJenck con 13 años de contenido y es distribuidor oficial de Shimadzu, Hach y Cytiva para Argentina. Nada de eso aparece en el sitio de forma efectiva.</p>
+    <div class="findings-grid">
+      <div class="finding-card fade-up">
+        <div class="finding-icon bg-red">📣</div>
+        <h3>Homepage sin propuesta de valor</h3>
+        <p>El tagline "Instrumental Analítico • Argentina" describe el rubro, no posiciona a Jenck. Un visitante nuevo no sabe en 5 segundos qué los diferencia de cualquier otro distribuidor.</p>
+      </div>
+      <div class="finding-card fade-up">
+        <div class="finding-icon bg-orange">🎯</div>
+        <h3>Sin CTAs ni captura de leads</h3>
+        <p>No hay formularios, no hay WhatsApp, no hay botones de consulta en las fichas de producto. El único contacto visible es un teléfono en el footer.</p>
+      </div>
+      <div class="finding-card fade-up">
+        <div class="finding-icon bg-yellow">🔍</div>
+        <h3>Catálogo invisible para Google</h3>
+        <p>El sitio es 100% JavaScript del lado del cliente. Google no puede leer los productos, capacitaciones ni fichas técnicas. Ninguna mejora de SEO tiene efecto sin resolver esto primero.</p>
+      </div>
+      <div class="finding-card fade-up">
+        <div class="finding-icon bg-blue">🔗</div>
+        <h3>NotiJenck desconectado</h3>
+        <p>13 años de contenido técnico de referencia viven en un dominio separado (notijenck.com.ar). Esa autoridad no transfiere al sitio principal ni convierte lectores en leads.</p>
+      </div>
+      <div class="finding-card fade-up">
+        <div class="finding-icon bg-purple">⭐</div>
+        <h3>35 años de historia invisible</h3>
+        <p>ISO 9001 desde 2005, 111 empleados, distribución oficial de Shimadzu, Hach y Cytiva, premio en el Congreso Argentino de Química Analítica. Ninguna de estas credenciales aparece en la homepage.</p>
+      </div>
+      <div class="finding-card fade-up">
+        <div class="finding-icon bg-red">📊</div>
+        <h3>Sin coherencia visual entre canales</h3>
+        <p>El sitio, NotiJenck, LinkedIn, los materiales de ventas y los flyers de capacitación no tienen un sistema visual unificado. La marca no se refuerza en cada contacto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROPUESTA -->
+<section id="propuesta">
+  <div class="container">
+    <p class="section-eyebrow fade-up">Nuestra propuesta</p>
+    <h2 class="section-title fade-up">Rediseño web y sistema de comunicación visual</h2>
+    <p class="section-desc fade-up">Un abordaje integral orientado a ordenar, modernizar y potenciar la comunicación de Jenck, tanto a nivel digital como en sus puntos de contacto comerciales.</p>
+
+    <div class="propuesta-intro fade-up">
+      <p>La propuesta no solo aborda el rediseño del sitio. Construye un <strong>ecosistema completo de comunicación</strong> que asegura coherencia, claridad y profesionalismo en todos los canales donde Jenck se presenta: su web, sus redes, sus presentaciones, sus congresos, sus mailings y sus reuniones comerciales.<br><br>Cada pieza está pensada para resolver uno de los problemas que identificamos en el diagnóstico.</p>
+    </div>
+
+    <div class="services-list fade-up">
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">01</div>
+          <div class="service-title-group">
+            <div class="service-title">Rediseño de Sitio Web</div>
+            <div class="service-subtitle">Diseño en Figma · One page · Orientado a conversión</div>
+          </div>
+          <div class="service-price">$1.680.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Transformamos el sitio actual en una <strong>one page moderna, clara y orientada a la conversión</strong>. Se mantiene la información actual, reorganizada estratégicamente para mejorar la navegación y facilitar la comprensión del alto volumen de contenido técnico que maneja Jenck.</p>
+          <p><strong>El diseño incluye:</strong> Home completo (one page principal), página de producto (modelo replicable) y página de capacitación / curso individual. Entregado en Figma con todas las pantallas documentadas.</p>
+          <p><strong>Enfoque:</strong> jerarquía de información que pone primero la propuesta de valor, trust bar con credenciales clave (35 años, ISO, marcas oficiales), CTAs visibles y accesibles, y adaptación del contenido técnico a una lectura clara para distintos perfiles de visitante.</p>
+          <div class="service-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">UX/UI</span>
+            <span class="tag">One page</span>
+            <span class="tag">Responsive</span>
+            <span class="tag">Conversión</span>
+          </div>
+          <div class="service-note">Solo diseño · No incluye desarrollo ni implementación técnica</div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">02</div>
+          <div class="service-title-group">
+            <div class="service-title">Manual de Marca</div>
+            <div class="service-subtitle">Sin rediseño de logo · Sistema visual aplicado</div>
+          </div>
+          <div class="service-price">$1.060.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Desarrollo del manual que ordena y define el uso de la identidad visual de Jenck aplicado a piezas de comunicación. Incluye criterios de uso, paleta de colores, tipografías, estilos visuales y lineamientos para lograr consistencia en todas las comunicaciones.</p>
+          <p>Este es el <strong>punto de partida del ecosistema</strong>: todas las piezas siguientes se derivan de las decisiones tomadas aquí. Sin un manual sólido, cada nueva pieza de comunicación requiere empezar de cero.</p>
+          <div class="service-tags">
+            <span class="tag">Identidad visual</span>
+            <span class="tag">Lineamientos</span>
+            <span class="tag">Tipografía</span>
+            <span class="tag">Color</span>
+            <span class="tag">Guía de uso</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">03</div>
+          <div class="service-title-group">
+            <div class="service-title">Flyers para Redes Sociales</div>
+            <div class="service-subtitle">3 piezas editables · 1080×1350</div>
+          </div>
+          <div class="service-price">$345.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Diseño de <strong>3 piezas adaptables</strong> en formato 1080×1350, pensadas para difusión de capacitaciones y campañas comerciales de productos. Diseñadas para ser editables por el equipo de Jenck de forma continua.</p>
+          <div class="service-tags">
+            <span class="tag">Instagram</span>
+            <span class="tag">LinkedIn</span>
+            <span class="tag">Editable</span>
+            <span class="tag">Capacitaciones</span>
+            <span class="tag">Productos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">04</div>
+          <div class="service-title-group">
+            <div class="service-title">Campañas de Mailing</div>
+            <div class="service-subtitle">3 bocetos en MailerLite</div>
+          </div>
+          <div class="service-price">$760.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Diseño de <strong>3 bocetos de mailing</strong> dentro de MailerLite orientados a promociones de productos e invitaciones a cursos. Pensados para mejorar la comunicación directa con la base de contactos de NotiJenck y de clientes existentes.</p>
+          <div class="service-tags">
+            <span class="tag">MailerLite</span>
+            <span class="tag">Email marketing</span>
+            <span class="tag">Cursos</span>
+            <span class="tag">Productos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">05</div>
+          <div class="service-title-group">
+            <div class="service-title">Banners para Congresos / Roll Up</div>
+            <div class="service-subtitle">2 piezas editables · Institucional + Producto</div>
+          </div>
+          <div class="service-price">$430.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Diseño de <strong>2 piezas</strong> con línea estética unificada: banner institucional y banner de producto. Ambos preparados para futuras actualizaciones y adaptaciones de contenido. Jenck ya participa en congresos científicos — estos materiales tienen que estar a la altura de las marcas que representa.</p>
+          <div class="service-tags">
+            <span class="tag">Congresos</span>
+            <span class="tag">Roll up</span>
+            <span class="tag">Editable</span>
+            <span class="tag">Institucional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">06</div>
+          <div class="service-title-group">
+            <div class="service-title">Folletos Comerciales</div>
+            <div class="service-subtitle">4 folletos editables · 1 general + 3 por unidad</div>
+          </div>
+          <div class="service-price">$645.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Diseño de <strong>4 folletos</strong>: 1 institucional general y 3 específicos (uno por cada unidad de negocio principal). Orientados a presentar de forma clara y ordenada los productos y servicios en reuniones comerciales, eventos y visitas técnicas.</p>
+          <div class="service-tags">
+            <span class="tag">Editable</span>
+            <span class="tag">Institucional</span>
+            <span class="tag">Unidades de negocio</span>
+            <span class="tag">Comercial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">07</div>
+          <div class="service-title-group">
+            <div class="service-title">Plantilla PowerPoint</div>
+            <div class="service-subtitle">Filmina master editable</div>
+          </div>
+          <div class="service-price">$300.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Desarrollo de una <strong>plantilla base editable</strong> para presentaciones. Permite que cualquier persona del equipo arme presentaciones coherentes con la identidad visual sin empezar de cero en cada ocasión.</p>
+          <div class="service-tags">
+            <span class="tag">PowerPoint</span>
+            <span class="tag">Editable</span>
+            <span class="tag">Master</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-header" onclick="toggleService(this)">
+          <div class="service-num">08</div>
+          <div class="service-title-group">
+            <div class="service-title">Presentación Institucional</div>
+            <div class="service-subtitle">Hasta 25 slides · Webinars, reuniones y ventas</div>
+          </div>
+          <div class="service-price">$730.000</div>
+          <div class="service-toggle">+</div>
+        </div>
+        <div class="service-body">
+          <p>Diseño de una <strong>presentación comercial de hasta 25 slides</strong> para webinars, reuniones comerciales y presentaciones institucionales. El contenido se organiza estratégicamente para contar la historia de Jenck de forma que responda las preguntas del comprador antes de que las haga.</p>
+          <div class="service-tags">
+            <span class="tag">PowerPoint</span>
+            <span class="tag">Webinars</span>
+            <span class="tag">Ventas</span>
+            <span class="tag">Institucional</span>
+            <span class="tag">25 slides</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section id="calculadora">
+  <div class="container-wide">
+    <p class="section-eyebrow fade-up">Inversión</p>
+    <h2 class="section-title fade-up">Armá tu propuesta a medida</h2>
+    <p class="section-desc fade-up">Cada ítem puede contratarse de forma independiente o en conjunto. Seleccioná los que te interesan para ver el total.</p>
+
+    <div class="calc-grid">
+      <div class="calc-items" id="calcItems">
+        <div class="calc-item selected" data-price="1680000" data-name="Rediseño de Sitio Web" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Rediseño de Sitio Web</div>
+            <div class="calc-item-desc">One page · Figma · Home + Producto + Curso</div>
+          </div>
+          <div class="calc-item-price">$1.680.000</div>
+        </div>
+        <div class="calc-item selected" data-price="1060000" data-name="Manual de Marca" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Manual de Marca</div>
+            <div class="calc-item-desc">Sin rediseño de logo · Sistema visual aplicado</div>
+          </div>
+          <div class="calc-item-price">$1.060.000</div>
+        </div>
+        <div class="calc-item selected" data-price="345000" data-name="Flyers para Redes Sociales" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Flyers para Redes Sociales</div>
+            <div class="calc-item-desc">3 piezas editables · 1080×1350</div>
+          </div>
+          <div class="calc-item-price">$345.000</div>
+        </div>
+        <div class="calc-item selected" data-price="760000" data-name="Campañas de Mailing" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Campañas de Mailing</div>
+            <div class="calc-item-desc">3 bocetos en MailerLite</div>
+          </div>
+          <div class="calc-item-price">$760.000</div>
+        </div>
+        <div class="calc-item selected" data-price="430000" data-name="Banners para Congresos / Roll Up" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Banners para Congresos / Roll Up</div>
+            <div class="calc-item-desc">2 piezas editables · Institucional + Producto</div>
+          </div>
+          <div class="calc-item-price">$430.000</div>
+        </div>
+        <div class="calc-item selected" data-price="645000" data-name="Folletos Comerciales" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Folletos Comerciales</div>
+            <div class="calc-item-desc">4 folletos editables · 1 general + 3 por unidad</div>
+          </div>
+          <div class="calc-item-price">$645.000</div>
+        </div>
+        <div class="calc-item selected" data-price="300000" data-name="Plantilla PowerPoint" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Plantilla PowerPoint</div>
+            <div class="calc-item-desc">Filmina master editable</div>
+          </div>
+          <div class="calc-item-price">$300.000</div>
+        </div>
+        <div class="calc-item selected" data-price="730000" data-name="Presentación Institucional" onclick="toggleCalc(this)">
+          <input type="checkbox" checked>
+          <div class="calc-check"></div>
+          <div class="calc-item-info">
+            <div class="calc-item-name">Presentación Institucional</div>
+            <div class="calc-item-desc">Hasta 25 slides · Webinars y reuniones</div>
+          </div>
+          <div class="calc-item-price">$730.000</div>
+        </div>
+      </div>
+
+      <div class="calc-sidebar">
+        <h3>Tu selección</h3>
+        <div class="calc-selected-list" id="selectedList">
+          <span class="calc-empty">Seleccioná ítems para ver el total</span>
+        </div>
+        <div class="calc-divider"></div>
+        <div class="calc-total-row">
+          <span class="calc-total-label">Total</span>
+          <span class="calc-total-amount" id="totalAmount">$0</span>
+        </div>
+        <div class="calc-note">Valores sin IVA</div>
+        <a href="mailto:florencia@somospopcorn.com?subject=Propuesta Jenck — Consulta" class="calc-cta">Consultarnos →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRONOGRAMA -->
+<section id="cronograma">
+  <div class="container">
+    <p class="section-eyebrow fade-up">Cronograma</p>
+    <h2 class="section-title fade-up">Cómo lo hacemos</h2>
+    <p class="section-desc fade-up">Estimado para la propuesta completa. Los plazos se ajustan según los ítems contratados y el flujo de revisiones.</p>
+    <div class="timeline fade-up">
+      <div class="timeline-item">
+        <div class="timeline-dot active">🚀</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semana 1</div>
+          <div class="timeline-title">Kick-off y briefing</div>
+          <div class="timeline-desc">Reunión de alineación, recopilación de materiales, definición de lineamientos visuales y de contenido. Acceso a assets de marca existentes.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot active">🎨</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 2–4</div>
+          <div class="timeline-title">Manual de Marca</div>
+          <div class="timeline-desc">El sistema visual base. Condición para todas las piezas siguientes. Paleta, tipografía, criterios de uso, lineamientos de comunicación.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot active">🖥️</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 3–6</div>
+          <div class="timeline-title">Rediseño Web en Figma</div>
+          <div class="timeline-desc">Home, página de producto y página de curso. Diseño en paralelo con el manual para ganar tiempo. Una ronda de revisión por pantalla.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">📋</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 5–9</div>
+          <div class="timeline-title">Piezas de comunicación</div>
+          <div class="timeline-desc">Flyers, mailings, banners, folletos y plantilla PowerPoint. Desarrollados con el sistema visual ya definido para garantizar coherencia.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">📊</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 8–10</div>
+          <div class="timeline-title">Presentación Institucional</div>
+          <div class="timeline-desc">Diseño final con contenido organizado estratégicamente, alineado a la identidad visual y optimizado para reuniones y webinars.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">✅</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semanas 10–11</div>
+          <div class="timeline-title">Entrega y cierre</div>
+          <div class="timeline-desc">Revisión final, ajustes y handoff de todos los archivos. Archivos editables entregados en los formatos acordados para uso inmediato del equipo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ POPCORN -->
+<section id="popcorn">
+  <div class="container">
+    <div class="popcorn-grid">
+      <div class="popcorn-text fade-up">
+        <p class="section-eyebrow">Somos Popcorn</p>
+        <h2>No somos ejecutores.<br>Somos socios estratégicos.</h2>
+        <p>Somos una agencia 360 de marketing digital y producción audiovisual con base en Buenos Aires, fundada en 2008. Trabajamos con clientes de distintas industrias en Argentina y la región con foco en resultados concretos y relaciones de largo plazo.</p>
+        <p>En este proyecto, traemos la combinación de <strong>estrategia de comunicación + diseño aplicado a materiales comerciales reales</strong>. No solo hacemos que las cosas se vean bien: nos aseguramos de que comuniquen lo correcto, al público correcto, en el momento correcto.</p>
+      </div>
+      <div class="popcorn-stats fade-up">
+        <div class="popcorn-stat">
+          <div class="num">18+</div>
+          <div class="desc">años en el mercado digital argentino</div>
+        </div>
+        <div class="popcorn-stat">
+          <div class="num">360°</div>
+          <div class="desc">estrategia, diseño, producción y paid media</div>
+        </div>
+        <div class="popcorn-stat">
+          <div class="num">B2B</div>
+          <div class="desc">experiencia en comunicación de empresas técnicas y de servicios</div>
+        </div>
+        <div class="popcorn-stat">
+          <div class="num">ARG</div>
+          <div class="desc">base en Buenos Aires · clientes en toda la región</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASOS -->
+<section id="pasos">
+  <div class="container">
+    <p class="section-eyebrow">Para arrancar</p>
+    <h2 class="section-title">¿Seguimos?</h2>
+    <p class="section-desc">El proceso es simple y sin fricción.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Revisás la propuesta</h3>
+        <p>Chequeás los ítems que te interesan en la calculadora y nos consultás cualquier duda.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Confirmás los ítems</h3>
+        <p>Propuesta completa o bloques seleccionados — como prefieran avanzar.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Acordamos inicio</h3>
+        <p>Definimos condiciones de pago y arrancamos el kick-off en la semana siguiente.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Kick-off</h3>
+        <p>Reunión de briefing para levantar materiales, alinear expectativas y arrancar con el manual.</p>
+      </div>
+    </div>
+    <div style="margin-top: 32px; text-align: center;">
+      <a href="mailto:florencia@somospopcorn.com?subject=Propuesta Jenck — Quiero avanzar" style="display: inline-block; background: var(--red); color: #fff; font-size: 16px; font-weight: 700; padding: 15px 36px; border-radius: 10px; text-decoration: none; transition: background .2s;" onmouseover="this.style.background='#c62828'" onmouseout="this.style.background='#E53935'">Escribirle a Florencia →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Somos <span>Popcorn</span></div>
+      <p style="color: rgba(255,255,255,0.3); font-size: 12px; margin-top: 6px;">Agencia de marketing digital y producción audiovisual · Buenos Aires</p>
+    </div>
+    <div class="footer-validity">
+      <p>Propuesta válida hasta</p>
+      <p><strong>28 de mayo de 2026</strong></p>
+    </div>
+    <div class="footer-contact">
+      <p>Contacto directo</p>
+      <a href="mailto:florencia@somospopcorn.com">florencia@somospopcorn.com</a>
+      <p style="margin-top: 4px;"><a href="mailto:florencia@somospopcorn.com" style="color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 400;">Florencia · Gerente de Operaciones</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── TOGGLE SERVICES ──
+function toggleService(header) {
+  const body = header.nextElementSibling;
+  const toggle = header.querySelector('.service-toggle');
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.service-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.service-toggle').forEach(t => t.classList.remove('open'));
+  if (!isOpen) {
+    body.classList.add('open');
+    toggle.classList.add('open');
+  }
+}
+
+// ── CALCULADORA ──
+const formatPrice = n => '$' + n.toLocaleString('es-AR');
+
+function toggleCalc(item) {
+  item.classList.toggle('selected');
+  updateCalc();
+}
+
+function updateCalc() {
+  const selected = document.querySelectorAll('.calc-item.selected');
+  const list = document.getElementById('selectedList');
+  const total = document.getElementById('totalAmount');
+  let sum = 0;
+  let html = '';
+  if (selected.length === 0) {
+    list.innerHTML = '<span class="calc-empty">Seleccioná ítems para ver el total</span>';
+    total.textContent = '$0';
+    return;
+  }
+  selected.forEach(item => {
+    const price = parseInt(item.dataset.price);
+    const name = item.dataset.name;
+    sum += price;
+    html += `<div class="calc-selected-item"><span>${name}</span><span>${formatPrice(price)}</span></div>`;
+  });
+  list.innerHTML = html;
+  total.textContent = formatPrice(sum);
+}
+
+// ── SCORE ANIMATIONS ──
+function animateScores() {
+  const bars = document.querySelectorAll('.score-bar');
+  bars.forEach(bar => {
+    const w = bar.dataset.width;
+    setTimeout(() => { bar.style.width = w + '%'; }, 200);
+  });
+  const values = document.querySelectorAll('[data-score]');
+  values.forEach(el => {
+    const target = parseInt(el.dataset.score);
+    let current = 0;
+    const step = target / 40;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = Math.round(current);
+      if (current >= target) clearInterval(timer);
+    }, 25);
+  });
+  // Global score
+  const globalEl = document.getElementById('globalScore');
+  let cur = 0;
+  const globalTimer = setInterval(() => {
+    cur = Math.min(cur + 45/40, 45);
+    globalEl.innerHTML = Math.round(cur) + '<span>/100</span>';
+    if (cur >= 45) clearInterval(globalTimer);
+  }, 25);
+}
+
+// ── INTERSECTION OBSERVER ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      if (entry.target.closest('#diagnostico') && !window.scoresAnimated) {
+        window.scoresAnimated = true;
+        animateScores();
+      }
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── INIT CALC ──
+updateCalc();
+</script>
+</body>
+</html>
